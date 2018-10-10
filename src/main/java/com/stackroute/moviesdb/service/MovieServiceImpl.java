@@ -17,8 +17,8 @@ import java.util.Optional;
 
 @Service
 @Primary
-//@Transactional
 @Qualifier("1")
+
 public class MovieServiceImpl implements MovieService {
 
 
@@ -28,10 +28,6 @@ public class MovieServiceImpl implements MovieService {
     public MovieServiceImpl(MovieRepository movieRepository1){
         this.movieRepository=movieRepository1;
     }
-
-
-
-
 
     @Override
     public Movies saveMovie(Movies movies) throws MovieNameExistsException {
